@@ -72,46 +72,6 @@ function asyncAddThread({ title, body, category }) {
   };
 }
 
-// function asyncToggleLikeThread(threadId) {
-//   return async (dispatch, getState) => {
-//     dispatch(showLoading());
-//     const { authUser } = getState();
-
-//     try {
-//       await api.upVoteThread(threadId);
-//       dispatch(
-//         toggleLikeThreadActionCreator({ threadId, userId: authUser.id }),
-//       );
-//     } catch (error) {
-//       alert(error.message);
-//       dispatch(
-//         toggleLikeThreadActionCreator({ threadId, userId: authUser.id }),
-//       );
-//     }
-//     dispatch(hideLoading());
-//   };
-// }
-
-// function asyncToggleDislikeThread(threadId) {
-//   return async (dispatch, getState) => {
-//     dispatch(showLoading());
-//     const { authUser } = getState();
-
-//     try {
-//       await api.downVoteThread(threadId);
-//       dispatch(
-//         toggleDislikeThreadActionCreator({ threadId, userId: authUser.id }),
-//       );
-//     } catch (error) {
-//       alert(error.message);
-//       dispatch(
-//         toggleDislikeThreadActionCreator({ threadId, userId: authUser.id }),
-//       );
-//     }
-//     dispatch(hideLoading());
-//   };
-// }
-
 function asyncToggleLikeThread(threadId) {
   return async (dispatch, getState) => {
     dispatch(showLoading());

@@ -156,42 +156,6 @@ function asyncAddComment({ threadId, content }) {
   };
 }
 
-// async function asyncToggleUpVoteThreadComment(threadId, commentId) {
-//   return async (dispatch, getState) => {
-//     dispatch(showLoading());
-//     const { authUser } = getState();
-//     dispatch(toggleUpVoteThreadCommentActionCreator(commentId, authUser.id));
-
-//     try {
-//       await api.upVoteComment(threadId, commentId);
-//     } catch (error) {
-//       alert(error.message);
-//       dispatch(
-//         toggleClearVoteThreadCommentActionCreator(commentId, authUser.id),
-//       );
-//     }
-//     dispatch(hideLoading());
-//   };
-// }
-
-// async function asyncToggleDownVoteThreadComment(threadId, commentId) {
-//   return async (dispatch, getState) => {
-//     dispatch(showLoading());
-//     const { authUser } = getState();
-//     dispatch(toggleDownVoteThreadCommentActionCreator(commentId, authUser.id));
-
-//     try {
-//       await api.downVoteComment(threadId, commentId);
-//     } catch (error) {
-//       alert(error.message);
-//       dispatch(
-//         toggleClearVoteThreadCommentActionCreator(commentId, authUser.id),
-//       );
-//     }
-//     dispatch(hideLoading());
-//   };
-// }
-
 function asyncToggleUpVoteThreadComment(threadId, commentId) {
   return async (dispatch, getState) => {
     const { authUser } = getState();
