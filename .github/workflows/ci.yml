@@ -1,21 +1,25 @@
 name: Continuous Integration
- 
+
 on:
-  pull_request:
+  push:
     branches:
       - main
- 
+
 jobs:
-  automation-test-job:
+  build:
     runs-on: ubuntu-latest
- 
+
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install and test
-        run: |
-          npm install
-          npm run ci:test
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm run ci:test
