@@ -1,3 +1,15 @@
+/**
+ * Skenario Pengujian untuk threadsReducer Function
+ *
+ * - Mengembalikan state yang sama jika action tidak dikenali
+ * - Menghandle RECEIVE_THREADS action
+ * - Menghandle ADD_THREAD action
+ * - Menghandle TOGGLE_LIKE_THREAD action
+ * - Menghandle TOGGLE_DISLIKE_THREAD action
+ * - Menghandle ADD_COMMENT action
+ * - Menghandle UPDATE_COMMENT_COUNT action
+ */
+
 import { describe, expect, it } from 'vitest';
 import threadsReducer from './reducer';
 import { ActionType } from './action';

@@ -1,3 +1,18 @@
+/**
+ * Skenario Pengujian untuk detailThreadReducer Function
+ *
+ * - Mengembalikan state yang sama jika action tidak dikenali
+ * - Menghandle SET_THREAD_DETAIL action
+ * - Menghandle CLEAR_THREAD_DETAIL action
+ * - Menghandle ADD_COMMENT action
+ * - Menghandle TOGGLE_UP_VOTE_THREAD_DETAIL action
+ * - Menghandle TOGGLE_DOWN_VOTE_THREAD_DETAIL action
+ * - Menghandle CLEAR_VOTE_THREAD_DETAIL action
+ * - Menghandle TOGGLE_UP_VOTE_THREAD_COMMENT action
+ * - Menghandle TOGGLE_DOWN_VOTE_THREAD_COMMENT action
+ * - Menghandle CLEAR_VOTE_THREAD_COMMENT action
+ */
+
 import { describe, expect, it } from 'vitest';
 import detailThreadReducer from './reducer';
 import { ActionType } from './action';

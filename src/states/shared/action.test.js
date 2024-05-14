@@ -1,6 +1,11 @@
-import {
-  describe, beforeEach, afterEach, it, vi, expect,
-} from 'vitest';
+/**
+ * Skenario Pengujian untuk asyncPopulateUsersAndThreads Function
+ *
+ * - Seharusnya mengirimkan tindakan dengan benar saat pengambilan data berhasil
+ * - Seharusnya mengirimkan tindakan dan menampilkan pesan toast dengan benar saat pengambilan data gagal
+ */
+
+import { describe, beforeEach, afterEach, it, vi, expect } from 'vitest';
 import { hideLoading, showLoading } from 'react-redux-loading-bar';
 import api from '../../utils/api';
 import asyncPopulateUsersAndThreads from './action';
@@ -9,7 +14,6 @@ import { receiveUsersActionCreator } from '../users/action';
 import { toast } from 'react-toastify';
 
 describe('asyncPopulateUsersAndThreads Function', () => {
-  // Deklarasi variabel palsu di atas blok describe
   const fakeUsersResponse = [
     {
       id: 'user-1',
